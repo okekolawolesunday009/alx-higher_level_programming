@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-for tens in range(ord('0'), ord('9')):
-    for units in range(ord('0') + 1, ord('9')):
-        if tens != ord('8') or units != ord('9'):
-            print("{:01}{:01}".format(chr(tens), chr(units)), end=", ")
-        else:
-            print("{:01}{:01}".format(chr(tens), chr(units)), end=" ")
+for n in range(0, 10):
+    for j in range(n + 1, 10):
+        if n != 8 or j != 9:
+            if n != 0 or j != 1:
+                print(", ", end='')
+            print("{:02}".format(n * 10 + j), end='')
+
+print()
