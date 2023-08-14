@@ -5,7 +5,7 @@ from calculator_1 import add, sub, mul, div
 
 
 def calc():
-    num_args = len(sys.argv) - 1
+    num_args = len(sys.argv)
 
     if num_args != 4:
         print("Usage: {} <num1> <operator> <num2>".format(sys.argv[0]))
