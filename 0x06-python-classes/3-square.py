@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+
+"""Define a class Square."""
+
 class Square:
      def __ini__(self, size=0):
            """Initializes a new square
@@ -12,7 +15,13 @@ class Square:
            self.__size = size
            
            def area(self):
-             """Return the current area of the square."""
+             """Return the current area of the square.
+             Arguments:
+                self: instance of a class
+             Returns:
+                self * self
+             
+             """
              return (self.__size * self.__size)
 
 
