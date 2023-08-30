@@ -15,21 +15,20 @@ class Square:
         __init__: instance of the class is created
         area: gets the area of square
 
-    Example:
-        Area: 9
-        'Square' object has no attribute 'size'
-        'Square' object has no attribute '__size'
-        Area: 25
+    Result:
+    Area: 7921 for size: 89
+    Area: 9 for size: 3
+    size must be an intege
     """
     def __init__(self, size=0):
-        self.size = size
+        self.__size = size
 
-    ''' size getter'''
     def size(self):
+        ''' size getter'''
         return self.__size
 
-        ''' size setter'''
     def size(self, value):
+        ''' size setter'''
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -38,4 +37,4 @@ class Square:
 
     def area(self):
         '''area of square'''
-        return self.__size ** 2
+        return (self.__size ** 2)
