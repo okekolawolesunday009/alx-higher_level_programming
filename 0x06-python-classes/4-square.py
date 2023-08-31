@@ -14,11 +14,9 @@ class Square:
     Methods:
         __init__: instance of the class is created
         area: gets the area of square
-
-    Result:
-    Area: 7921 for size: 89
-    Area: 9 for size: 3
-    size must be an intege
+    Raises:
+            TypeError: When the value passed in is not an integer
+            ValueError: When the value passed in is less than 0
     """
     def __init__(self, size=0):
         self.__size = size
