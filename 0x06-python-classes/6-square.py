@@ -16,15 +16,17 @@ class Square:
         position: position of the square
     """
     def __init__(self, size=0, position=(0, 0)):
-        self._size = size
-        self._position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
+        '''size getter'''
         return self.__size
-    
+
     @size.setter
-    def size(self, value):
+    def size(self, value)i:
+        '''size setter'''
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -35,7 +37,7 @@ class Square:
     def position(self):
         """position of Square getter."""
         return self.__position
-    
+
     @position.setter
     def position(self, value):
         """position of Square getter."""
@@ -58,4 +60,3 @@ class Square:
                 print()
             for _ in range(self.__size):
                 print(" " * self.__position[0] + "#" * self.__size)
-   
