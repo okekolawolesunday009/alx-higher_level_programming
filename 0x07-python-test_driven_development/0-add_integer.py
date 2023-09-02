@@ -6,13 +6,13 @@ def add_integer(a, b=0):
     """represents a add function'
      Args:
         a: first integer 
-        b: second integer
+        b: second integer and optional
     Raises:
         TypeError: a arguments must be integers
                    b arguments must be integers
     """
-    if not isinstance(a, int):
-        raise TypeError("a arguments must be integers")
+    if not isinstance(a, (int, float)):
+        raise TypeError("a must be an integers")
     elif not isinstance(b, int):
-        raise TypeError("b is not an integer")
-    return a + b
+        raise TypeError("b must be  an integer")
+    return int(a + b)
