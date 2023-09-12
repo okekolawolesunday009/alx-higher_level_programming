@@ -5,8 +5,8 @@
 class MyList(list):
     def __init__(self, *arg):
         """function is used to call the constructor """
-        super().__init__(*arg)
 
     def print_sorted(self):
         """prints out sorted list"""
-        print(self.sort())
+        print(sorted(self))
+
