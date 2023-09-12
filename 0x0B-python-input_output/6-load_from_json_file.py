@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+""""Defines to write obj file from JSON"""
+
+
 import json
 
-
-def save_to_json_file(my_obj, filename):
+"""creates an Object from a “JSON file”:"""
+def load_from_json_file(filename):
     with open(filename, mode='w', encoding='utf-8') as file:
         json_str = json.loads(my_obj)
         file.write(json_str)
