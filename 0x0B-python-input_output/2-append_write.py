@@ -7,5 +7,5 @@ def append_write(filename="", text=""):
             lines = file.write(text)
             return (lines)
     except FileNotFoundError:
-        print(f"No such file or directory")
+        print("No such file or directory")
         return None
