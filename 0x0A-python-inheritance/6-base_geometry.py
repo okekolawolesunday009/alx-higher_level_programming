@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""Defines a classe Base Geometry"""
+
 
 class BaseGeometry:
-    def __init__(self, *arg):
-        super().__init__(*arg)
-
+    """class Geometry"""
     def area(self):
+        """raise Exception error"""
         raise Exception("area() is not implemented")
