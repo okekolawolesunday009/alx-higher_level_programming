@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import json
 """JSON OF AN OBJ"""
 
+import json
 
 def to_json_string(my_obj):
     """functionize to JSON """
