@@ -7,4 +7,4 @@ def write_file(filename="", text=""):
         file.write(text)
     with open(filename, "r", encoding='utf-8') as file:
         lines = len(file.readlines())
-        print(lines)
+        return (lines)
