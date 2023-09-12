@@ -7,5 +7,5 @@ import json
 """creates an Object from a “JSON file”:"""
 def load_from_json_file(filename):
     with open(filename, mode='w', encoding='utf-8') as file:
-        json_str = json.loads(my_obj)
-        file.write(json_str)
+        json_obj= json.loads(file)
+        file.write(json_obj)
