@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """1-rectanggle"""
-from models.base import Base
 
+
+from models.base import Base
 
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -61,3 +62,64 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
+    def area(self):
+        """area of rectangle"""
+        return (self.__width * self.__height)
+    
+    def display(self):
+        """prints in stdout the Rectangle instance with the character # """
+        for z in range(self.__y):
+            print()
+            for i in range(self.__height):
+                for w in range(self.__x):
+                    print("", end ="")
+                for j in range(self.__width):
+                    print('#', end='')
+                print()
+
+    def __str__(self):
+        """Return string
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
+    def update(self, *args, **kwargs):
+        """
+        Update attributes using positional arguments.
+        Args:
+            args: Positional arguments in the order width, height, x, y, id.
+        """
+        if len(args) > 0:
+            for i in range(len(args)):
+                if len(args) >= 1:
+                    self.id = args[0]
+                if len(args) >= 2:
+                    self.width = args[1]
+                if len(args) >= 3:
+                    self.height = args[2]
+                if len(args) >= 4:
+                    self.x = args[3]
+                if len(args) >= 5:
+                    self.y = args[4]
+        else:
+            if len(kwargs) > 0:
+                for key in kwargs.keys():
+                    if key == "id":
+                        self.id = kwargs["id"]
+                    if key == "width":
+                        self.width = kwargs["width"]
+                    if key == "height":
+                        self.height = kwargs["height"]
+                    if key == "x":
+                        self.x = kwargs["x"]
+                    if key == "y":
+                        self.y = kwargs["y"]
+
+    def to_dictionary(self):
+        dictionary = {
+            'id': self.id,
+            'width': self.__width,
+            'height': self.__height,
+            'x': self.__x,
+            'y': self.__y
+        }
+        return dictionary
