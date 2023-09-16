@@ -5,6 +5,7 @@
 from models.rectangle import Rectangle
 
 class Square(Rectangle):
+    """subclass of rectangle"""
     def __init__(self, size, x=0, y=0, id=None):
         super().__init__(size, size, x, y, id)
 
@@ -57,6 +58,7 @@ class Square(Rectangle):
                         self.y = kwargs["y"]
 
     def to_dictionary(self):
+        """returns dictionary"""
         dictionary = {
             'id': self.id,
             'size': self.__width,

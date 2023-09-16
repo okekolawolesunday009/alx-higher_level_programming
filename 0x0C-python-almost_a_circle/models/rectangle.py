@@ -5,6 +5,7 @@
 from models.base import Base
 
 class Rectangle(Base):
+    """Subclass of base"""
     def __init__(self, width, height, x=0, y=0, id=None):
       super().__init__(id)
       self.__width = width 
@@ -115,6 +116,7 @@ class Rectangle(Base):
                         self.y = kwargs["y"]
 
     def to_dictionary(self):
+        """Returns dictionary"""
         dictionary = {
             'id': self.id,
             'width': self.__width,
