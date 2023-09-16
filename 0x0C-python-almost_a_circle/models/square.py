@@ -13,7 +13,7 @@ class Square(Rectangle):
         """Return string
         """
         return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.height)
+            self.id, self.x, self.y, self.size)
     
     @property
     def size(self):
@@ -51,7 +51,7 @@ class Square(Rectangle):
                     if key == "id":
                         self.id = kwargs["id"]
                     if key == "size":
-                        self.height = kwargs["size"]
+                        self.width = kwargs["size"]
                     if key == "x":
                         self.x = kwargs["x"]
                     if key == "y":
@@ -61,7 +61,7 @@ class Square(Rectangle):
         """returns dictionary"""
         dictionary = {
             'id': self.id,
-            'size': self.__width,
+            'size': self.__size,
             'x': self.__x,
             'y': self.__y
         }
