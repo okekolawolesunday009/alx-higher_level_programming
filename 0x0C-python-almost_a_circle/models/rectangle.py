@@ -4,14 +4,15 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
-      super().__init__(id)
-      self.__width = width 
-      self.__height = height
-      self.__x = x 
-      self.__y = y
-    
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+
     @property
     def width(self):
         """Get/set the width of the Rectangle."""
@@ -19,7 +20,7 @@ class Rectangle(Base):
     
     @width.setter
     def width(self, value):
-        if type(value) !=  int:
+        if not isinstance (value, int):
             raise TypeError("width must be an integer")
         elif value <= 0:
             raise ValueError("width must be > 0")
@@ -34,7 +35,7 @@ class Rectangle(Base):
     def height(self, value):
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("height must be > 0")
         self.__height = value
 
@@ -45,9 +46,9 @@ class Rectangle(Base):
     
     @x.setter
     def x(self, value):
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("x must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
 
@@ -58,7 +59,9 @@ class Rectangle(Base):
     
     @y.setter
     def y(self, value):
-        if value < 0:
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        elif value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
 
@@ -76,11 +79,12 @@ class Rectangle(Base):
             for _ in range(self.__width):
                 print('#', end="")
             print()
+
     def __str__(self):
         """Return string
         """
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
-            self.id, self.x, self.y, self.width, self.height)
+            self.id, self.__x, self.__y, self.__width, self.__height)
     def update(self, *args, **kwargs):
         """
         Update attributes using positional arguments.
@@ -116,9 +120,9 @@ class Rectangle(Base):
     def to_dictionary(self):
         dictionary = {
             'id': self.id,
-            'width': self.__width,
-            'height': self.__height,
-            'x': self.__x,
-            'y': self.__y
+            'x': self.x,
+            'y': self.y,
+            'width': self.width,
+            'height': self.height
         }
         return dictionary
