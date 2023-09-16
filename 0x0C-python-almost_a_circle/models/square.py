@@ -35,35 +35,21 @@ class Square(Rectangle):
         Args:
             args: Positional arguments in the order width, height, x, y, id.
         """
-        if len(args) > 0:
-            for i in range(len(args)):
-                if len(args) >= 1:
-                    self.id = args[0]
-                if len(args) >= 2:
-                    self.height = args[1]
-                if len(args) >= 3:
-                    self.x = args[2]
-                if len(args) >= 4:
-                    self.y = args[3]
+        if args:
+            attrs = ["id", "size", "x", "y"]
+            for i, arg in enumerate(args):
+                setattr(self, attrs[i], arg)
         else:
-            if len(kwargs) > 0:
-                for key in kwargs.keys():
-                    if key == "id":
-                        self.id = kwargs["id"]
-                    if key == "size":
-                        self.width = kwargs["size"]
-                    if key == "x":
-                        self.x = kwargs["x"]
-                    if key == "y":
-                        self.y = kwargs["y"]
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     def to_dictionary(self):
         """returns dictionary"""
         dictionary = {
             'id': self.id,
-            'size': self.__size,
-            'x': self.__x,
-            'y': self.__y
+            'size': self.size,
+            'x': self.x,
+            'y': self.y
         }
-        return dictionary
-    
+        return dictionary 
