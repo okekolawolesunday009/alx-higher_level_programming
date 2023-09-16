@@ -20,7 +20,7 @@ class Square(Rectangle):
         return self.width
     
     @size.setter
-    def x(self, value):
+    def size(self, value):
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -46,8 +46,8 @@ class Square(Rectangle):
     def to_dictionary(self):
         dictionary = {
             'id': self.id,
-            'size': self.size,
             'x': self.x,
+            'size': self.size,
             'y': self.y
         }
         return dictionary 
