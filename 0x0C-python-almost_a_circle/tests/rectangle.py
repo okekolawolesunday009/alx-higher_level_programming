@@ -1,8 +1,9 @@
->>> from models.base import Base
 """Unittest for max_integer([..])
 """
 
 import unittest
+from models.base import Base
+
 max_integer = __import__('6-max_integer').max_integer
 
 class TestBase(unittest.TestCase):
