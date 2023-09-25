@@ -38,3 +38,12 @@ class Square(Rectangle):
     """subclass of rectangle"""
     def __init__(self, size):
         super().__init__(size, size)
+
+    def __str__(self):
+        """
+            Returns a custom string representation of the square.
+
+            Returns:
+                str: A string in the format '[Rectangle] <size>/<size>'.
+        """
+        return f"[Square] {self._Rectangle__width}/{self._Rectangle__height}"
