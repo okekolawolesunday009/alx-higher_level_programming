@@ -32,6 +32,7 @@ class Student:
             dict containig the attributes of the student instance
             attrs: optional
         """
+
         if attrs is None:
             return {
                     'first_name': self.first_name,
