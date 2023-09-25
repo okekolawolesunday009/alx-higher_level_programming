@@ -38,9 +38,3 @@ class Square(Rectangle):
     """subclass of rectangle"""
     def __init__(self, size):
         super().__init__(size, size)
-        self.integer_validator("size", int)
-        self.__size = size
-
-    def area(self):
-        """area of square"""
-        return (self.__size * self.__size)
