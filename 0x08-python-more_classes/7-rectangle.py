@@ -58,12 +58,9 @@ class Rectangle:
         Represents the rectangle with the # character.
         """
         if self.__width == 0 or self.__height == 0:
-            return ("")
-        else:
-            rectangle_str = ""
-            for _ in range(self.height):
-                rectangle_str += str(Rectangle.print_symbol) * self.width + "\n"
-            return rectangle_str[:-1]
+            return ""
+        return "\n".join([str(self.print_symbol) * self.__width] *
+                         self.__height)
 
 
     def __repr__(self):
