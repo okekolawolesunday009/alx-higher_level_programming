@@ -1,10 +1,9 @@
-#!/usr/bin/python3
-def uppercase(str):
-    res = ""
-    for i in str:
-        if 'a' <= i <= 'z':
-            charUpper = chr(ord(i) - ord('a') + ord('A'))
-            res += "{}".format(charUpper)
-        else:
-            res += "{}".format(i)
-    return res
+#!/usr/bin/python3                                                  
+# prrogarm that prints capital letter                               
+def uppercase(str):                                                 
+    for u in str:                                                   
+        if ord(u) >= 97 and ord(u) <= 122:                          
+             u = chr(ord(u) - 32) 
+                                            
+        print("{}".format(u), end="")
+    print("")

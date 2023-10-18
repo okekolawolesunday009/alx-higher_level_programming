@@ -1,4 +1,6 @@
 #!/usr/bin/python3
-for char in range(ord('a'), ord('{')):
-    if char != 113 and char != 101:
-        print("{}".format(chr(char)), end="")
+"""program that prints aphabet escept q and e
+"""
+for i in range(97, 123):
+    if i != 113 and i != 101:
+        print("{}".format(chr(i)), end="")

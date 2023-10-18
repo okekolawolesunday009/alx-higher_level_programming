@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-for number in range(0, 100):
-    if number != 99:
-        print("{:02}, ".format(number), end=" ")
-    else:
-        print("{:02}".format(number), end=" ") 
+# progrom that prints 0 to 99
+for i in range(00, 99):
+    print("{:02d}".format(i), end=', ')
+print("{:02d}".format(i + 1))

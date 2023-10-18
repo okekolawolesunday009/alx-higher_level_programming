@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-for char in range(ord('a'), ord('{')):
-    print("{}".format(chr(char)), end="")
+""" print the alphabet in lowercase
+"""
+for i in range(97, 123):
+    print("{}".format(chr(i)), end="")
