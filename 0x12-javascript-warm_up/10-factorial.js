@@ -1,13 +1,12 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
+const  argv  = process.argv.slice(2);
 
 const x = argv[0];
 function factorial (x) {
-  if (x < 0) {
-    return NaN;
-  } else if (isNaN(x) || (n == 0 || n == 1)) {
-    return 1;
+  if (isNaN(x) || (x == 0 || x == 1)) {
+    return console.log(1);
   } else {
-    return x * factorial(x - 1);
+    return console.log(x * factorial(x - 1));
   }
 }
+factorial(x)
