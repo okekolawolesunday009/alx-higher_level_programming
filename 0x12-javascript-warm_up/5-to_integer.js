@@ -1,10 +1,8 @@
 #!/usr/bin/node
-const  argv  = process.argv.slice(2);
+const argv = process.argv.slice(2);
 
-if (isNaN(argv[0])) {
-    return "Not a number";
+if (isNaN(argv[0]) || argv[0] === undefined) {
+  console.log('Not a number');
 } else {
-    argv.forEach((val) => {
-       return  console.log(`My number : ${val}`);
-    })
+  console.log(`My number: ${argv[0]}`);
 }
