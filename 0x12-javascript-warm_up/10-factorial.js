@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const  argv  = process.argv.slice(2);
+const argv = process.argv.slice(2);
 
 const x = argv[0];
 function factorial (x) {
@@ -9,4 +9,4 @@ function factorial (x) {
     return console.log(x * factorial(x - 1));
   }
 }
-factorial(x)
+factorial(x);
