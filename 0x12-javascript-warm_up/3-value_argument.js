@@ -1,10 +1,8 @@
 #!/usr/bin/node
-const { argv } = require("node:process");
+const  argv  = process.argv.slice(2);
 
-if (argv[0] == 0) {
-    return "No argument";
+if (argv[0] == undefined) {
+	console.log("No argument");
 } else {
-    argv.forEach((val) => {
-       return  console.log(val);
-    })
+	console.log(argv[0]);
 }
