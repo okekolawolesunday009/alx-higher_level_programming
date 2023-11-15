@@ -13,20 +13,20 @@ module.exports = class Rectangle {
      
     }
     print() {
-        for (let i = 0; i < this.height; i++) {
-            console.log('X'.repeat(this.width));
+        for (let i = 0; i < this.width; i++) {
+            console.log('X'.repeat(this.height));
           }
     }
 
     rotate() {
-        for (let i = 0; i < this.width; i++) {
-            console.log('X'.repeat(this.height));
+        for (let i = 0; i < this.height; i++) {
+            console.log('X'.repeat(this.width));
           }
 
     }
     double() {
-        for (let i = 0; i < this.height * 2; i++) {
-            console.log('X'.repeat(this.width * 2));
+        for (let i = 0; i < this.width * 2; i++) {
+            console.log('X'.repeat(this.heigth * 2));
           }
 
     }
