@@ -7,7 +7,7 @@ if (isNaN(x)) {
 } else {
   for (let i = 0; i < x; i++) {
 	     console.log('X');
-    for (let j = 0; i < i; i++) {
+    for (let j = 0; j < i; i++) {
       console.log('\n');
     }
   }
