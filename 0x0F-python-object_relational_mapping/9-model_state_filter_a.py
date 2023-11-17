@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import sqlalchemy 
+import sqlalchemy
 from sys import argv, exit
 from model_state import Base, State
 from sqlalchemy import (create_engine)
@@ -14,13 +14,8 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     session = Session()
     stateArr = []
-    states = session.query(State).order_by(State.id).all()
+    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
 
     for state in states:
-        stateArr.append(state)
+         print("{}: {}".format(state.id, state.name))
 
-    # Print only the first state in stateArr
-    if stateArr:
-        print("{}: {}".format(stateArr[0].id, stateArr[0].name))
-    else:
-        print("No states found.")
