@@ -3,7 +3,7 @@
 
 
 if __name__ == "__main__":
-    import MYSQLdb
+    import MySQLdb
     from sys import argv, exit
 
     if len(argv) != 4:
@@ -13,7 +13,7 @@ if __name__ == "__main__":
     pwd = argv[2]
     db = argv[3]
     #Trying to connect 
-    db_connection = MySQLdb.connect(usr=usr, passwd="", db ="hbtn_0e_0_usa",port=3306)
+    db_connection = MySQLdb.connect(host="localhost", user=usr, password=pwd, database=db,port=3306)
     cursor = db_connection.cursor()
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
     states = cursor.fetchall()
