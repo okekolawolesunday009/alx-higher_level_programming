@@ -3,7 +3,6 @@
 
 
 if __name__ == '__main__':
-    
 
     import sqlalchemy
     from sys import argv
@@ -14,10 +13,9 @@ if __name__ == '__main__':
     username = '{}'.format(argv[1])
     password = '{}'.format(argv[2])
     db_name = '{}'.format(argv[3])
-  
+
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.
-                           format(username, password, db_name,
-                                  pool_pre_ping=True))
+                           format(username, password, db_name))
 
     Session = sessionmaker(bind=engine)
     session = Session()
