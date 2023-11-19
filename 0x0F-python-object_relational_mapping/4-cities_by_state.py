@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""documnetation"""
+import MySQLdb
+from sys import argv, exit
 
 
 if __name__ == "__main__":

@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """Start link class to table in database 
 """
+"""documnetation"""
+import MySQLdb
+from sys import argv, exit
 import sys
 from model_state import Base, State
 
