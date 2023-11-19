@@ -19,8 +19,7 @@ if __name__ == '__main__':
     for state in states:
         stateArr.append(state)
 
-    # Print only the first state in stateArr
     if stateArr:
         print("{}: {}".format(stateArr[0].id, stateArr[0].name))
     else:
-        print("No states found.")
+        print("Nothing")
