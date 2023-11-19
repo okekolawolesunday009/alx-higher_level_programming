@@ -13,11 +13,10 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    stateArr = []
     states = session.query(State).filter(
-            State.name == argv[4]).order_by(State.id).all()
+            State.name == argv[4]).first()
 
-    for state in states:
-        print("{}".format(state.id))
+    if states is not None:
+        print("{}".format(states.id))
     else:
         print("Not found")
