@@ -20,4 +20,5 @@ if __name__ == '__main__':
 
     pstates = session.query(State).filter(State.name == "Louisiana"
                                          ).first()
-    print(f"{}".format(pstate.id))
+    if pstates:
+        print("{}".format(pstate.id))
