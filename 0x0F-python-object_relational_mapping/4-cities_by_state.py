@@ -14,7 +14,7 @@ if __name__ == "__main__":
     lh = "localhost"
     pt = 3306
     d = MySQLdb.connect(host=lh, user=usr, password=pwd, database=db, port=pt)
-    cursor = dbc.cursor()
+    cursor = d.cursor()
     query = """SELECT cities.id, cities.name, states.name
     FROM cities INNER JOIN states ON cities.state_id = states.id
     ORDER BY id ASC"""
