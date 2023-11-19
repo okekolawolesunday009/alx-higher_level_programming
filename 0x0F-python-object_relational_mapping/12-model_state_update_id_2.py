@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""documentation"""
 import sqlalchemy
 from sys import argv, exit
 from model_state import Base, State

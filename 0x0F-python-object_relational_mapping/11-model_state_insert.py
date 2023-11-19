@@ -18,7 +18,6 @@ if __name__ == '__main__':
     session.add(new_state)
     session.commit()
 
-    pstates = session.query(State).filter(State.name == "Louisiana"
-                                         ).first()
+    pstates = session.query(State).filter(State.name == "Louisiana").first()
     if pstates:
         print("{}".format(pstates.id))
