@@ -14,12 +14,12 @@ if __name__ == "__main__":
     db = argv[3]
     lh = "localhost"
     pt = 3306
-    dbc = MySQLdb.connect(host=lh, user=usr, password=pwd, database=db, port=pt)
-    cursor = dbc.cursor()
+    d = MySQLdb.connect(host=lh, user=usr, password=pwd, database=db, port=pt)
+    cursor = d.cursor()
     cursor.execute("SELECT * FROM states")
     states = cursor.fetchall()
     for row in states:
         print(row)
 
     cursor.close()
-    dbc.close()
+    d.close()
