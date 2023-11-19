@@ -19,13 +19,9 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    stateArr = []
-    states = session.query(State).order_by(State.id).all()
+    states = session.query(State).first()
 
-    for state in states:
-        stateArr.append(state)
-
-    if stateArr:
-        print("{}: {}".format(stateArr[0].id, stateArr[0].name))
+    if states is not None:
+        print("{}: {}".format(states.id, states.name))
     else:
         print("Nothing")

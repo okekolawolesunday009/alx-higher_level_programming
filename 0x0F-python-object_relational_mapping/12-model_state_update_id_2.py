@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""documentation"""
 import sqlalchemy
 from sys import argv, exit
 from model_state import Base, State
@@ -18,6 +19,5 @@ if __name__ == '__main__':
     if updated_state:
         updated_state.name = "New Mexico"
         session.commit()
-        print("State with id 2 updated successfully.")
     else:
-        print("State with id 2 not found.")
+        print("")
