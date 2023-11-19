@@ -11,10 +11,9 @@ if __name__ == "__main__":
     usr = argv[1]
     pwd = argv[2]
     db = argv[3]
-    #Trying to connect 
     lh = "localhost"
     pt = 3306
-    dbc = MySQLdb.connect(host=lh, user=usr, password=pwd, database=db, port=pt)
+    d = MySQLdb.connect(host=lh, user=usr, password=pwd, database=db, port=pt)
     cursor = dbc.cursor()
     query = """SELECT cities.id, cities.name, states.name
     FROM cities INNER JOIN states ON cities.state_id = states.id
@@ -25,4 +24,4 @@ if __name__ == "__main__":
         print(row)
 
     cursor.close()
-    dbc.close()
+    d.close()

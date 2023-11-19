@@ -5,8 +5,6 @@
 import MySQLdb
 from sys import argv, exit
 import sys
-from model_state import Base, State
-
 from sqlalchemy import (create_engine)
 
 if __name__ == "__main__":

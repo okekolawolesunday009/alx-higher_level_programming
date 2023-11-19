@@ -15,11 +15,10 @@ if __name__ == "__main__":
     pwd = argv[2]
     db = argv[3]
     argument = argv[4]
-    #Trying to connect 
     lh = "localhost"
     pt = 3306
-    dbc = MySQLdb.connect(host=lh, user=usr, password=pwd, database=db, port=pt)
-    cursor = dbc.cursor()
+    d = MySQLdb.connect(host=lh, user=usr, password=pwd, database=db, port=pt)
+    cursor = d.cursor()
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     cursor.execute(query, (argument,))
     states = cursor.fetchall()
@@ -27,4 +26,4 @@ if __name__ == "__main__":
         print(row)
 
     cursor.close()
-    dbc.close()
+    d.close()
