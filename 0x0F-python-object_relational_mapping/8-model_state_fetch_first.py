@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """documentation"""
-import sqlalchemy 
+import sqlalchemy
 from sys import argv, exit
 from model_state import Base, State
 from sqlalchemy import (create_engine)
