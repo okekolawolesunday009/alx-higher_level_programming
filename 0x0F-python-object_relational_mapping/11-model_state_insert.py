@@ -17,11 +17,3 @@ if __name__ == '__main__':
     new_state = State(name="Louisiana")
     session.add(new_state)
     session.commit()
-
-    stateArr = []
-    states = insert(State).values(name="Louisiana")
-    states = session.query(State).filter(State.name == "Louisiana"
-                                         ).order_by(State.id).all()
-
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
