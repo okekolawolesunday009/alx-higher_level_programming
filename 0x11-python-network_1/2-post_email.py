@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""send POST request"""
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 from urllib.parse import urlencode
@@ -19,8 +20,7 @@ if __name__ == "__main__":
                 content = response.read()
                 uf8_content = content.decode('utf-8')
 
-            print("Your email is:", email)
-            print(content)
+            print("Your email is:", uf8_content)
         except URLError as e:
             print(e.reason)
 
