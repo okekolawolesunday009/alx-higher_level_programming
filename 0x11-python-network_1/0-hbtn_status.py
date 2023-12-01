@@ -1,0 +1,19 @@
+#!/usr/bin/python3
+from urllib.request import Request, urlopen
+from urllib.error import URLError, HTTPError
+
+
+if __name__ == "__main__":
+    url = ' https://alx-intranet.hbtn.io/status'
+    req = Request(url)
+    try:
+        with urlopen(req) as response:
+            content = response.read()
+            utf8_content = content.decode('utf-8')
+        print("Body resonse:")
+        print("    - type:", type(content))
+        print("    - content:", repr(content))
+        print("    - utf8 content:", utf8_content)
+
+    except urllib.error.URLError as e:
+        print(e.reason)
