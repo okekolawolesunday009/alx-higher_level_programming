@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """print error code"""
-import urllib.request import Request, urlopen
+from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 from urllib.parse import urlencode
 from sys import argv, exit

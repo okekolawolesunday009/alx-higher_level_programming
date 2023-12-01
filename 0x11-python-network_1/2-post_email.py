@@ -9,7 +9,7 @@ from sys import argv, exit
 if __name__ == "__main__":
         if len(argv) != 3:
             exit(1)
-        url = str(argv[1])
+        url = argv[1]
         email = argv[2]
 
         data = urlencode({'email': email}).encode('utf-8')
