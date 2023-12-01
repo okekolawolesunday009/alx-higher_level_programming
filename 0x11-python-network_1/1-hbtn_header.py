@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+#prints the X-Request-Id of the url
 from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 from sys import argv, exit
