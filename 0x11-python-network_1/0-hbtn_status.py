@@ -14,6 +14,3 @@ if __name__ == "__main__":
         print("    - type:", type(content))
         print("    - content:", repr(content))
         print("    - utf8 content:", utf8_content)
-
-    except urllib.error.URLError as e:
-        print(e.reason)
