@@ -19,6 +19,6 @@ if __name__ == "__main__":
         with urlopen(req) as response:
             content = response.read()
             uf8_content = content.decode('utf-8')
-            print(ut8_content)
+            print(uf8_content)
     except URLError as e:
         print(e.reason)
