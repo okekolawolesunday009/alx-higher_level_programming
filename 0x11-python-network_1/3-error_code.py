@@ -17,4 +17,4 @@ if __name__ == "__main__":
             uf8_content = content.decode('utf-8')
             print(ut8_content)
     except HTTPError as e:
-        print(e.code)
+        print(f"Error code: {e.code}")
