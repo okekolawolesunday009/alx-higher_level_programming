@@ -20,7 +20,7 @@ if __name__ == "__main__":
                 content = response.read()
                 uf8_content = content.decode('utf-8')
 
-            print("Your email is:", uf8_content)
+            print(uf8_content)
         except URLError as e:
             print(e.reason)
 
