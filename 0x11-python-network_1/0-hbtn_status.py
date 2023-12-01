@@ -10,7 +10,7 @@ if __name__ == "__main__":
         with urlopen(req) as response:
             content = response.read()
             utf8_content = content.decode('utf-8')
-        print("Body resonse:")
+        print("Body response:")
         print("    - type:", type(content))
         print("    - content:", repr(content))
         print("    - utf8 content:", utf8_content)
