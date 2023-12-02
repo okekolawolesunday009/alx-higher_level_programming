@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""technical interview - to print the list of user
+    """
 import requests
 from requests import auth
 from requests.auth import HTTPBasicAuth

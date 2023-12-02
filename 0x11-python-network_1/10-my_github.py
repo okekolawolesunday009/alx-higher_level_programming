@@ -11,7 +11,7 @@ if __name__ == "__main__":
         exit(1)
     username = argv[1]
     password = argv[2]
-    api_url = "https://api.github.com/user" 
+    api_url = "https://api.github.com/user"
     r = requests.get(api_url, auth=auth.HTTPBasicAuth(username, password))
     user_data = r.json()
     print(user_data.get('id'))
