@@ -5,8 +5,11 @@ import requests
 
 
 if __name__ == "__main__":
+    if len(argv) == 2:
+        data = {'q': argv[1]}
+    else:
+        data = {}
     url = 'http://0.0.0.0:5000/search_user'
-    data = {'q': argv[1]}
     req = requests.post(url, data=data)
     type_res = req.headers['content-type'] = 'application/json'
 
