@@ -11,9 +11,6 @@ if __name__ == "__main__":
     req = requests.get(url)
     if req.status_code == 200:
         ri = req.headers.get('X-Request-Id')
-        if ri:
-            print(ri)
-        else:
-            print("x-Request-Id not found")
+        print(ri)
     else:
         print(f"Error:{req.status_code}")
