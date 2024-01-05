@@ -9,4 +9,3 @@ try {
 } catch (err) {
 	console.error(`Error writing to file: ${err.message}`);
 }
-
